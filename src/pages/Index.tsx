@@ -29,6 +29,8 @@ const Index = () => {
               <button onClick={() => scrollToSection('home')} className="hover:text-primary transition-colors">Главная</button>
               <button onClick={() => scrollToSection('about')} className="hover:text-primary transition-colors">Обо мне</button>
               <button onClick={() => scrollToSection('services')} className="hover:text-primary transition-colors">Услуги</button>
+              <button onClick={() => scrollToSection('certificates')} className="hover:text-primary transition-colors">Сертификаты</button>
+              <button onClick={() => scrollToSection('gallery')} className="hover:text-primary transition-colors">Галерея</button>
               <button onClick={() => scrollToSection('method')} className="hover:text-primary transition-colors">Методика</button>
               <button onClick={() => scrollToSection('indications')} className="hover:text-primary transition-colors">Показания</button>
               <button onClick={() => scrollToSection('contact')} className="hover:text-primary transition-colors">Контакты</button>
@@ -92,6 +94,74 @@ const Index = () => {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="certificates" className="py-20 bg-secondary/20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-primary mb-8 text-center">Сертификаты и квалификация</h2>
+          <div className="max-w-4xl mx-auto mb-6">
+            <p className="text-center text-lg text-muted-foreground mb-12">
+              Профессиональная подготовка и постоянное повышение квалификации
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="p-0">
+                <img 
+                  src="https://cdn.poehali.dev/projects/bda6fbad-4208-43a7-9e5c-fa5b63a4d3b0/files/651a8428-a2fc-4c20-a652-d01e214deee1.jpg" 
+                  alt="Сертификат гирудотерапевта" 
+                  className="w-full h-80 object-cover"
+                />
+                <div className="p-4 text-center">
+                  <p className="font-semibold text-primary">Диплом по гирудотерапии</p>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="p-0">
+                <img 
+                  src="https://cdn.poehali.dev/projects/bda6fbad-4208-43a7-9e5c-fa5b63a4d3b0/files/05d17999-c239-45a6-803e-3538d8671eb3.jpg" 
+                  alt="Сертификат профессиональной подготовки" 
+                  className="w-full h-80 object-cover"
+                />
+                <div className="p-4 text-center">
+                  <p className="font-semibold text-primary">Сертификат профессиональной подготовки</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-primary mb-8 text-center">Галерея кабинета</h2>
+          <div className="max-w-4xl mx-auto mb-6">
+            <p className="text-center text-lg text-muted-foreground mb-12">
+              Комфортная атмосфера и современное оборудование для вашего здоровья
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              { src: 'https://cdn.poehali.dev/projects/bda6fbad-4208-43a7-9e5c-fa5b63a4d3b0/files/6b1336f3-ba42-42e7-bf8e-bc681ea595e1.jpg', title: 'Процедурный кабинет' },
+              { src: 'https://cdn.poehali.dev/projects/bda6fbad-4208-43a7-9e5c-fa5b63a4d3b0/files/f1af3dae-e485-4b74-8ca1-a10fd451b23d.jpg', title: 'Рабочая зона' },
+              { src: 'https://cdn.poehali.dev/projects/bda6fbad-4208-43a7-9e5c-fa5b63a4d3b0/files/3c7901f1-4735-4dfc-af18-cfe145dd57fa.jpg', title: 'Зона ожидания' },
+            ].map((image, i) => (
+              <Card key={i} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-0">
+                  <img 
+                    src={image.src} 
+                    alt={image.title} 
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-4 text-center">
+                    <p className="font-semibold text-primary">{image.title}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
