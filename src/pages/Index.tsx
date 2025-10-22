@@ -39,25 +39,25 @@ const Index = () => {
       </nav>
 
       <section id="home" className="py-20 md:py-32 bg-gradient-to-b from-secondary/30 to-background relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 opacity-10">
           <img 
-            src="https://cdn.poehali.dev/projects/bda6fbad-4208-43a7-9e5c-fa5b63a4d3b0/files/47951fcd-948e-4f74-8233-aa6787cd29ed.jpg" 
+            src="https://cdn.poehali.dev/projects/bda6fbad-4208-43a7-9e5c-fa5b63a4d3b0/files/6973e74d-2897-46d1-9db3-c2983a3c90ca.jpg" 
             alt="" 
             className="w-full h-full object-cover"
           />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-6xl font-bold text-primary mb-6">
+            <h2 className="text-4xl md:text-6xl font-bold text-primary mb-6 animate-fade-in">
               Яковлева Ольга Васильевна
             </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-4">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-4 animate-fade-in-delay-1">
               Специалист по гирудотерапии
             </p>
-            <p className="text-lg text-foreground/80 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-foreground/80 mb-8 max-w-2xl mx-auto animate-fade-in-delay-2">
               Натуральный подход к оздоровлению организма с использованием проверенных веками методик
             </p>
-            <Button size="lg" onClick={() => scrollToSection('contact')} className="text-lg px-8">
+            <Button size="lg" onClick={() => scrollToSection('contact')} className="text-lg px-8 animate-fade-in-delay-3">
               Записаться на приём
             </Button>
           </div>
@@ -68,11 +68,15 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-primary mb-8 text-center">Обо мне</h2>
-            <Card className="border-2">
+            <Card className="border-2 hover:shadow-xl transition-shadow duration-300">
               <CardContent className="p-8">
                 <div className="flex flex-col md:flex-row gap-8 items-center">
-                  <div className="w-48 h-48 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
-                    <Icon name="User" size={80} className="text-primary" />
+                  <div className="w-48 h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-secondary">
+                    <img 
+                      src="https://cdn.poehali.dev/projects/bda6fbad-4208-43a7-9e5c-fa5b63a4d3b0/files/4f6dffce-6df9-4e24-8405-3fc6c3df90fe.jpg" 
+                      alt="Кабинет" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="flex-1">
                     <p className="text-lg leading-relaxed mb-4">
@@ -104,9 +108,9 @@ const Index = () => {
               { icon: 'Activity', title: 'Опорно-двигательный аппарат', desc: 'Лечение суставов и позвоночника' },
               { icon: 'Users', title: 'Женское здоровье', desc: 'Гинекологические заболевания' },
             ].map((service, i) => (
-              <Card key={i} className="hover:shadow-lg transition-shadow">
+              <Card key={i} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 transition-transform duration-300 hover:scale-110">
                     <Icon name={service.icon} size={32} className="text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
@@ -118,11 +122,18 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="method" className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+      <section id="method" className="py-20 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <img 
+            src="https://cdn.poehali.dev/projects/bda6fbad-4208-43a7-9e5c-fa5b63a4d3b0/files/0c0fb21b-05e2-4895-97aa-34c3972d3b94.jpg" 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-primary mb-8 text-center">Методика гирудотерапии</h2>
-            <Card className="border-2">
+            <Card className="border-2 hover:shadow-xl transition-shadow duration-300">
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <div>
